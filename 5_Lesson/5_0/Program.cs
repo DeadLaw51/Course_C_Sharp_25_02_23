@@ -7,5 +7,5 @@
         else 
             neg += arr[i];
     }
-    Console.WriteLine(" pol = ")
+    Console.WriteLine(" pol = ");
 }
