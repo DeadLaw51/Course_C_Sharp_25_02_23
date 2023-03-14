@@ -7,16 +7,16 @@
     Console.WriteLine();
 }
 
-int[] MassNums(int size, int from, int to)
+double[] MassNums(int size, int from, int to)
 {
-    int[] arr = new int[size];
+    double[] arr = new double[size];
 
     for (int i = 0; i < size; i++)
         arr[i] = new Random().Next(from, to);
     return arr;
 }
 
-void SumPosNeg(int[] arr)
+/*void SumPosNeg(int[] arr)
 {
     int  rezult =0;
     for (int i = 0; i < arr.Length; i++)
@@ -27,7 +27,7 @@ void SumPosNeg(int[] arr)
     }
     Console.WriteLine(rezult);
 
-}
+}*/
 
 Console.WriteLine("Задайте количество элементов массива");
 int num = int.Parse(Console.ReadLine()!);
@@ -36,6 +36,6 @@ int start = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Задайте максимальное число массива");
 int stop = int.Parse(Console.ReadLine()!);
 
-int[] mass = MassNums(num, start, stop);
+double[] mass = MassNums(num, start, stop);
 Print(mass);
-SumPosNeg(mass);
+//SumPosNeg(mass);
