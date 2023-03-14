@@ -1,4 +1,4 @@
-﻿void Print(int[] arr)
+﻿void Print(double[] arr)
 {
     int size = arr.Length;
 
@@ -9,25 +9,32 @@
 
 double[] MassNums(int size, int from, int to)
 {
+    Random rnd = new Random();
     double[] arr = new double[size];
 
     for (int i = 0; i < size; i++)
-        arr[i] = new Random().Next(from, to);
+        arr[i] = (rnd.NextDouble() * (to - from)) + from;
     return arr;
 }
 
-/*void SumPosNeg(int[] arr)
+void SumPosNeg(double[] arr, int max_numb)
 {
-    int  rezult =0;
+    double  rezult =0 , min = max_numb , max = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if(i % 2 > 0){
-            rezult = rezult + arr[i];
+        if(arr[i] > max ){
+            max = arr[i];  
+        }
+        if(arr[i]< min ){
+            min = arr[i];
         }
     }
-    Console.WriteLine(rezult);
+    rezult = max - min;
+    Console.WriteLine("max = " + max);
+    Console.WriteLine("min = " + min);
+    Console.WriteLine("Rezult = " + rezult);
 
-}*/
+}
 
 Console.WriteLine("Задайте количество элементов массива");
 int num = int.Parse(Console.ReadLine()!);
@@ -38,4 +45,4 @@ int stop = int.Parse(Console.ReadLine()!);
 
 double[] mass = MassNums(num, start, stop);
 Print(mass);
-//SumPosNeg(mass);
+SumPosNeg(mass, stop);
