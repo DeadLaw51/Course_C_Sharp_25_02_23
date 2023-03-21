@@ -10,5 +10,4 @@ string Dvo(int num){
     return rez;
 }
 
-//int a = int.Parse(Console.Readline()!);
 Console.WriteLine(Dvo(12));
