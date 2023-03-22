@@ -6,6 +6,8 @@
     Console.WriteLine(x + " " + y);
 }
 
+
+
 double x1,y1,x2,y2;
 x1 = double.Parse(Console.ReadLine()!);
 y1 = double.Parse(Console.ReadLine()!);
